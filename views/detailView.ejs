@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+
+ 
+
+
+  <body>
+  
+ <%- include('partials/header.ejs') %>
+    
+
+  
+  <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <h2>ADMIN PANEL</h2>
+    </div>
+    <nav class="main-nav" role="navigation">
+    <ul class="sidebar-nav unstyled list-hover-slide">
+      <li class="active">
+        <a  href="/facultyView"><i class="fa fa-home" ></i> <img src="/images/tIcon.png">FACULTY</a>
+      </li>
+      <li>
+        <a href="/subjectadd"><i class="fa fa-plug"></i> <img src="/images/courseIc.png">COURSE</a>
+      </li>
+      <li>
+        <a href="/Roomlist"><i class="fa fa-user"></i>  <img src="/images/ic_classroom.png">CLASS Room</a>
+      </li>
+      <li>
+        <a href="/period"><i class="fa fa-user"></i><img src="/images/ic_enforce.png">PERIOD list</a>
+      </li>
+        <li>
+          <a href="/enfValue"><i class="fa fa-user"></i><img src="/images/ic_enforce.png">ENFORCE value</a>
+        </li>
+        <li >
+          <a href="/generateTable"><i class="fa fa-user"></i><img src="/images/ic_generate.png">Generate TimeTable</a>
+        </li>
+        
+    </ul>
+    </nav>
+  </aside>
+
+    <div id="wrapper" class="nav-wrap">
+ 
+
+        
+      
+      <div id="navbar-wrapper">
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <h3 style="padding-right: 730px;color: black;">Home Page</h3>
+              
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+        
+        <div>
+          <div  class="container " style="padding-top: 9px;">
+              <div class="row" style="padding: 15px;">
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body container card text-white bg-primary mb-3"  class="">
+                              <h1 class="text-center"> <h1 class="text-center"><%= totalrooms[0].totalFaculty %></h1></h1>
+                              <h3>Teachers</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body card text-white bg-success mb-3" >
+                              <h1 class="text-center"> <h1 class="text-center"><%= totalrooms[0].totalSubjects %></h1> </h1>
+                              <h3>Subjects</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row" style="padding: 14px;">
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body card text-white bg-info mb-3">
+                              <h1 class="text-center"><%= totalrooms[0].totalRooms%></h1>
+                              
+                              <h3>Rooms</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="card">
+                          <div class="card-body card text-white bg-secondary mb-3">
+                              <h1 class="text-center"> <h1 class="text-center"><%= totalrooms[0].totalPeriods %></h1></h1>
+                              <h3>Periods</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <%- include('partials/footer.ejs') %>
+   </body>
+</html>
